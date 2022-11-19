@@ -6,7 +6,8 @@
     @endif
 
     <h2>List of Articles</h2>
-    <a href="{{ route('articles.create') }}"><button type="button">Create</button></a>
+    @auth
+        <a href="{{ route('articles.create') }}"><button type="button">Create</button></a>
+    @endauth
     @each('articles.partials.list', $articles, 'article')
-
 @endsection

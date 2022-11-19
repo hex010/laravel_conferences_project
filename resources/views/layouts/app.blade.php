@@ -8,6 +8,17 @@
     <title>Document</title>
 </head>
 <body>
+    <header>
+        @guest
+            <a href="{{route('login')}}">Login</a>
+        @else
+            <a class="logout" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+            <form id="logout-form" action="{{route('logout')}}" method="post" style="display: none;">
+                @csrf
+
+            </form>
+        @endguest
+    </header>
 @yield('content')
 </body>
 </html>

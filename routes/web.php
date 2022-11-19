@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 //});
 
 Route::get('/', function() {
-    return 'Welcome to the Home Page';
+    return view('home.index');
 })->name('home.index');
 
 Route::get('/contact', function() {
@@ -34,9 +35,17 @@ Route::get('/contact', function() {
 ////    return "Articles from $days days ago";
 ////})->name('articles.recent');
 
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/conference', function() {
     return view('home.conference');
 })->name('home.conference');
 
+
 Route::resource('articles', \App\Http\Controllers\ArticlesController::class);
+
+//auth
+
+Route::get('login', [LoginController::class, 'showLoginForm'])->name('login.form');
+Route::post('login', [LoginController::class, 'login'])->name('login');
+Route::post('logout', [LoginController::class, 'logout'])->name('logout');
