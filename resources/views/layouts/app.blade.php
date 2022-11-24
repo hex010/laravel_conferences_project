@@ -18,6 +18,18 @@
 
             </form>
         @endguest
+
+        @if(session()->get('locale') === 'en')
+            <a href="{{ route('lang.change', ['lang' => 'lt']) }}">LT</a>
+        @else
+            <a href="{{ route('lang.change', ['lang' => 'en']) }}">EN</a>
+        @endif
+
+        @auth
+            <h3>{{__('app.home_module.welcome', ['name' => auth()->user()->username])}}</h3>
+            <br>
+        @endauth
+
     </header>
 @yield('content')
 </body>
