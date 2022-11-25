@@ -6,6 +6,6 @@
         @csrf
         @method('PUT')
         @include('conferences.partials.form')
-        <div><input type="submit" value="Update"></div>
+        <div><input type="submit" value="{{__('app.conferences_module.update')}}"></div>
     </form>
 @endsection

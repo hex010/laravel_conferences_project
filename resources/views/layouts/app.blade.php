@@ -9,27 +9,12 @@
 </head>
 <body>
     <header>
-        @guest
-            <a href="{{route('login')}}">Login</a>
-        @else
-            <a class="logout" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
-            <form id="logout-form" action="{{route('logout')}}" method="post" style="display: none;">
-                @csrf
+        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+        <script type="text/javascript" src="{{ mix('js/app.js') }}"></script>
 
-            </form>
-        @endguest
-
-        @if(session()->get('locale') === 'en')
-            <a href="{{ route('lang.change', ['lang' => 'lt']) }}">LT</a>
-        @else
-            <a href="{{ route('lang.change', ['lang' => 'en']) }}">EN</a>
-        @endif
-
-        @auth
-            <h3>{{__('app.conferences_module.welcome', ['name' => auth()->user()->username])}}</h3>
-        @endauth
-
+        @include('conferences.partials.navbar')
     </header>
-@yield('content')
+
+    @yield('content')
 </body>
 </html>

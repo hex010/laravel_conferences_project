@@ -10,12 +10,27 @@
     },
     "devDependencies": {
         "axios": "^0.21",
-        "laravel-mix": "^6.0.6",
-        "resolve-url-loader": "^5.0.0",
-        "sass": "^1.55.0",
-        "sass-loader": "^12.1.0"
+        "laravel-mix": "^6.0.6"
     },
     "dependencies": {
+        "@popperjs/core": "^2.11.6",
         "bootstrap": "^5.2.1"
-    }
+    },
+    "name": "conferences",
+    "description": "<p align=\"center\"><a href=\"https://laravel.com\" target=\"_blank\"><img src=\"https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg\" width=\"400\" alt=\"Laravel Logo\"></a></p>",
+    "version": "1.0.0",
+    "main": "vite.config.js",
+    "directories": {
+        "test": "tests"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/hex010/laravel_conferences_project.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/hex010/laravel_conferences_project/issues"
+    },
+    "homepage": "https://github.com/hex010/laravel_conferences_project#readme"
 }

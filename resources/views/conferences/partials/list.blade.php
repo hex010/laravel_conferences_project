@@ -1,17 +1,16 @@
-<div>
-    <h1>Title: {{$conference['title']}}</h1>
-    <p>Content: {{$conference['content']}}</p>
-    <p>Date: {{$conference['date']}}</p>
-    <p>Address: {{$conference['address']}}</p>
-
-
+<div class="container p-3 my-3 bg-primary text-white">
+    <h1>{{$conference['title']}}</h1>
     @auth
-    <a href="{{ route('conferences.edit', ['conference' => $conference['id']]) }}"><button type="button">Edit</button></a>
-    <form action="{{ route('conferences.destroy', ['conference' => $conference['id']]) }}" method="post">
-        @method('delete')
-        @csrf
-        <input type="submit" value="Delete">
-    </form>
+        <p>{{__('app.conferences_module.content')}}: {{$conference['content']}}</p>
+        <p>{{__('app.conferences_module.date')}}: {{$conference['date']}}</p>
+        <p>{{__('app.conferences_module.address')}}: {{$conference['address']}}</p>
+        <a href="{{ route('conferences.edit', ['conference' => $conference['id']]) }}"><button type="button" class="mb-2 btn btn-dark">{{__('app.conferences_module.edit')}}</button></a>
+        <form action="{{ route('conferences.destroy', ['conference' => $conference['id']]) }}" method="post">
+            @method('delete')
+            @csrf
+            <input type="submit" value="{{__('app.conferences_module.delete')}}" class="btn btn-dark" data-toggle="modal" data-target="#deleteConferenceModal">
+        </form>
+    @else
+        <a href="{{ route('conferences.show', ['conference' => $conference['id']]) }}"><button type="button" class="btn btn-dark">{{__('app.conferences_module.view')}}</button></a>
     @endauth
-    <br>
 </div>
