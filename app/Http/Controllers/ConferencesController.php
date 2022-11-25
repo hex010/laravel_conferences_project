@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreArticleRequest;
-use App\Models\Article;
+use App\Http\Requests\StoreConferenceRequest;
+use App\Models\Conference;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Redirect;
 
-class ArticlesController extends Controller
+class ConferencesController extends Controller
 {
 
     public function __construct(){
@@ -22,7 +21,7 @@ class ArticlesController extends Controller
      */
     public function index()
     {
-        return view('articles.index', ['articles' => Article::all()]);
+        return view('conferences.index', ['conferences' => Conference::all()]);
     }
 
     /**
@@ -32,7 +31,7 @@ class ArticlesController extends Controller
      */
     public function create()
     {
-        return view('articles.create');
+        return view('conferences.create');
     }
 
     /**
@@ -41,14 +40,16 @@ class ArticlesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreArticleRequest $request, Article $article): RedirectResponse
+    public function store(Request $request, Conference $conference) : RedirectResponse
     {
         $validated = $request->validated();
-        $article->title = $validated['title'];
-        $article->content = $validated['content'];
-        $article->save();
+        $conference->title = $validated['title'];
+        $conference->content = $validated['content'];
+        $conference->date = $validated['date'];
+        $conference->address = $validated['address'];
+        $conference->save();
 
-        return redirect()->route('articles.show', ['article' => $article->id]);
+        return redirect()->route('conferences.show', ['conference' => $conference->id]);
     }
 
     /**
@@ -59,8 +60,7 @@ class ArticlesController extends Controller
      */
     public function show($id)
     {
-//        abort_if(!isset($this->articles[$id]), 404);
-        return view('articles.show', ['article' => Article::findOrFail($id)]);
+        return view('conferences.show', ['conference' => Conference::findOrFail($id)]);
     }
 
     /**
@@ -71,7 +71,7 @@ class ArticlesController extends Controller
      */
     public function edit($id)
     {
-        return view('articles.edit', ['article' => (new Article())->findOrFail($id)]);
+        return view('conferences.edit', ['conference' => (new Conference())->findOrFail($id)]);
     }
 
     /**
@@ -81,15 +81,15 @@ class ArticlesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(StoreArticleRequest $request, int $id) : RedirectResponse
+    public function update(StoreConferenceRequest $request, int $id) : RedirectResponse
     {
-        $article = (new Article())->findOrFail($id);
+        $conference = (new Conference())->findOrFail($id);
         $validated = $request->validated();
-        $article->fill($validated); //uzpildo duomenimis objekta
-        $article->save();
+        $conference->fill($validated);
+        $conference->save();
 
-        $request->session()->flash('status', 'Article updated');
-        return redirect()->route('articles.index');
+        $request->session()->flash('status', 'Conference updated');
+        return redirect()->route('conferences.index');
     }
 
     /**
@@ -100,10 +100,10 @@ class ArticlesController extends Controller
      */
     public function destroy(int $id) : RedirectResponse
     {
-        $article = (new Article())->findOrFail($id);
-        $article->delete();
+        $conference = (new Conference())->findOrFail($id);
+        $conference->delete();
 
-        session()->flash('status', 'Article deleted');
-        return redirect()->route('articles.index');
+        session()->flash('status', 'Conference deleted');
+        return redirect()->route('conferences.index');
     }
 }

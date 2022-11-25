@@ -1,9 +1,8 @@
 <?php
 
 return [
-    'home_module' => [
-        'index_title' => 'Pagrindinis',
-        'contact_title' => 'Kontaktai',
+    'conferences_module' => [
         'welcome' => 'Sveiki, :Name',
+        'conferencesCount' => '{0} Konferencijų nėra|[1,*] Yra :count konferencijos',
     ],
 ];

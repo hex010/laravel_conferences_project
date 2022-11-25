@@ -1,10 +1,8 @@
 <?php
 
 return [
-    'home_module' => [
-        'index_title' => 'Home Page',
-        'contact_title' => 'Contact Page',
+    'conferences_module' => [
         'welcome' => 'Welcome, :Name',
-        'apples' => '{0} There are none|[2,*] There are :count',
+        'conferencesCount' => '{0} There are no conferences|[1,*] There are :count conferences',
     ],
 ];
