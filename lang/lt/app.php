@@ -15,6 +15,7 @@ return [
         'date' => 'Data',
         'address' => 'Adresas',
         'backToTheList' => 'Grįžti atgal į sąrašą',
+        'participants' => 'Dalyviai',
     ],
     'login_module' => [
         'login' => 'Prisijungti',

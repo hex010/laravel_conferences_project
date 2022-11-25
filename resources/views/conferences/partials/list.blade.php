@@ -4,6 +4,7 @@
         <p>{{__('app.conferences_module.content')}}: {{$conference['content']}}</p>
         <p>{{__('app.conferences_module.date')}}: {{$conference['date']}}</p>
         <p>{{__('app.conferences_module.address')}}: {{$conference['address']}}</p>
+        <p>{{__('app.conferences_module.participants')}}: {{$conference['participants']}}</p>
         <a href="{{ route('conferences.edit', ['conference' => $conference['id']]) }}"><button type="button" class="mb-2 btn btn-dark">{{__('app.conferences_module.edit')}}</button></a>
         <form action="{{ route('conferences.destroy', ['conference' => $conference['id']]) }}" method="post">
             @method('delete')

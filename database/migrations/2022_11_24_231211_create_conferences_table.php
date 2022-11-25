@@ -19,6 +19,7 @@ return new class extends Migration
             $table->text('content');
             $table->date('date');
             $table->string('address');
+            $table->integer('participants');
             $table->timestamps();
         });
     }

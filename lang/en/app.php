@@ -15,6 +15,7 @@ return [
         'date' => 'Date',
         'address' => 'Address',
         'backToTheList' => 'Back to the list',
+        'participants' => 'Participants',
     ],
     'login_module' => [
         'login' => 'Login',

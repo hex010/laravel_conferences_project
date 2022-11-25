@@ -22,6 +22,7 @@ class ConferenceSeeder extends Seeder
                 'content' => Lorem::text(),
                 'date' => now(),
                 'address' => Lorem::sentence(12),
+                'participants' => Lorem::numberBetween(2,15)
             ]
         ]);
     }

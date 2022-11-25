@@ -26,3 +26,10 @@
     <p>{{$message}}</p>
     @enderror
 </div>
+<div>
+    <label for="address-input">{{__('app.conferences_module.participants')}}</label>
+    <input type="number" id="participants-input" name="participants" min="2" value="{{old('address', optional($conference ?? null)->participants)}}">
+    @error('participants')
+    <p>{{$message}}</p>
+    @enderror
+</div>

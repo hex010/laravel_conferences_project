@@ -47,6 +47,7 @@ class ConferencesController extends Controller
         $conference->content = $validated['content'];
         $conference->date = $validated['date'];
         $conference->address = $validated['address'];
+        $conference->participants = $validated['participants'];
         $conference->save();
 
         return redirect()->route('conferences.show', ['conference' => $conference->id]);
