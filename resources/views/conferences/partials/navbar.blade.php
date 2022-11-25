@@ -9,7 +9,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav" style="margin-left: auto">
 
             @guest
                 <li class="nav-item">

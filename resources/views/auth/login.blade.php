@@ -20,13 +20,13 @@
                 <label class="font-500">{{__('app.login_module.username')}}</label>
                 <input name="username" class="form-control form-control-lg mb-3" value="{{old('username')}}">
                 @error('username')
-                <p>{{$message}}</p>
+                <p style="color: red">{{$message}}</p>
                 @enderror
 
                 <label class="font-500">{{__('app.login_module.password')}}</label>
                 <input name="password" class="form-control form-control-lg" type="password" value="{{old('password')}}">
                 @error('password')
-                <p>{{$message}}</p>
+                <p style="color: red">{{$message}}</p>
                 @enderror
 
                 <p class="m-0 py-4"><label class="custom-control-label" for="customControlAutosizing">{{__('app.login_module.rememberMe')}}</label>
