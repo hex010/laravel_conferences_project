@@ -12,7 +12,11 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">{{__('app.conferences_module.cancel')}}</button>
-                <button type="button" class="btn btn-primary">{{__('app.conferences_module.delete')}}</button>
+                <form action="{{ route('conferences.destroy', ['conference' => $conference['id']]) }}" method="post">
+                    @method('delete')
+                    @csrf
+                    <input type="submit" value="{{__('app.conferences_module.delete')}}" class="btn btn-primary">
+                </form>
             </div>
         </div>
     </div>

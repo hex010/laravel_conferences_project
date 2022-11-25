@@ -4,7 +4,7 @@
 
 @section('content')
     <div class="form-container" style="height: 100%; display: flex; justify-content: center; align-items: center;">
-        <div class="col-lg-5 col-10 mx-auto">
+        <div class="col-lg-6 col-10 mx-auto">
             <div class="p-4 bg-white rounded shadow-lg">
                 <form action="{{ route('conferences.store') }}" method="post">
                     <h3 class="mb-2 text-center">{{__('app.conferences_module.confCreating')}}</h3>

@@ -8,11 +8,9 @@
             <p><span style="font-weight: bold">{{__('app.conferences_module.participants')}}:</span> <span>{{$conference['participants']}}</span></p>
         </div>
         <a href="{{ route('conferences.edit', ['conference' => $conference['id']]) }}"><button type="button" class="mb-2 btn btn-dark">{{__('app.conferences_module.edit')}}</button></a>
-        <form action="{{ route('conferences.destroy', ['conference' => $conference['id']]) }}" method="post">
-            @method('delete')
-            @csrf
-            <input type="submit" value="{{__('app.conferences_module.delete')}}" class="btn btn-dark" data-toggle="modal" data-target="#deleteConferenceModal">
-        </form>
+
+        @include('conferences.partials.modal', $conference)
+        <br><button type="button" class="btn btn-dark" id="deleteButton" data-toggle="modal" data-target="#deleteConferenceModal">{{__('app.conferences_module.delete')}}</button>
     @else
         <h1 >{{$conference['title']}}</h1>
         <a href="{{ route('conferences.show', ['conference' => $conference['id']]) }}"><button type="button" class="btn btn-dark">{{__('app.conferences_module.view')}}</button></a>

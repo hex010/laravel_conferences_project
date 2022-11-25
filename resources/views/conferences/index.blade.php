@@ -14,6 +14,5 @@
         @endauth
     </div>
 
-    @include('conferences.partials.modal')
     @each('conferences.partials.list', $conferences, 'conference')
 @endsection
