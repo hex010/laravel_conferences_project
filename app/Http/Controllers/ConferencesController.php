@@ -40,7 +40,7 @@ class ConferencesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, Conference $conference) : RedirectResponse
+    public function store(StoreConferenceRequest $request, Conference $conference) : RedirectResponse
     {
         $validated = $request->validated();
         $conference->title = $validated['title'];

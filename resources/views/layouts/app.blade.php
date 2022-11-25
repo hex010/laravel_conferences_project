@@ -26,8 +26,7 @@
         @endif
 
         @auth
-            <h3>{{__('app.home_module.welcome', ['name' => auth()->user()->username])}}</h3>
-            <br>
+            <h3>{{__('app.conferences_module.welcome', ['name' => auth()->user()->username])}}</h3>
         @endauth
 
     </header>

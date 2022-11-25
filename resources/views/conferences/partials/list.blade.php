@@ -1,6 +1,10 @@
 <div>
-    <h1>{{$conference['title']}}</h1>
-    <p>{{$conference['content']}}</p>
+    <h1>Title: {{$conference['title']}}</h1>
+    <p>Content: {{$conference['content']}}</p>
+    <p>Date: {{$conference['date']}}</p>
+    <p>Address: {{$conference['address']}}</p>
+
+
     @auth
     <a href="{{ route('conferences.edit', ['conference' => $conference['id']]) }}"><button type="button">Edit</button></a>
     <form action="{{ route('conferences.destroy', ['conference' => $conference['id']]) }}" method="post">
