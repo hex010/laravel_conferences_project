@@ -16,6 +16,11 @@ return [
         'address' => 'Adresas',
         'backToTheList' => 'Grįžti atgal į sąrašą',
         'participants' => 'Dalyviai',
+        'confEditing' => 'Konferencijos redagavimas',
+        'confCreating' => 'Konferencijos sukūrimas',
+        'deleteWarning' => 'Ar tikrai norite ištrinti šią konferenciją?',
+        'deleteModalTitle' => 'Konferencijos trynimas',
+        'cancel' => 'Atšaukti',
     ],
     'login_module' => [
         'login' => 'Prisijungti',

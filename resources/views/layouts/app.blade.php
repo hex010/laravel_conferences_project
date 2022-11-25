@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" style="height: 100%; ">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-<body>
+<body style="background: linear-gradient(to top, #80FFDB, #5390D9); height: 100%; background-attachment:fixed;">
     <header>
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
         <script type="text/javascript" src="{{ mix('js/app.js') }}"></script>

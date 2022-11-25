@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3" >
     @auth
         <a class="navbar-brand" href="{{ route('conferences.index') }}">{{__('app.conferences_module.welcome', ['name' => auth()->user()->username])}}</a>
     @else

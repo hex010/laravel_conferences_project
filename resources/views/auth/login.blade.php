@@ -30,7 +30,7 @@
                 @enderror
 
                 <p class="m-0 py-4"><label class="custom-control-label" for="customControlAutosizing">{{__('app.login_module.rememberMe')}}</label>
-                    <input type="checkbox" class="custom-control-input" id="customControlAutosizing" value="1"></p>
+                    <input type="checkbox" class="custom-control-input" id="customControlAutosizing" checked></p>
                 <button class="btn btn-primary btn-lg w-100 shadow-lg">{{__('app.login_module.login')}}</button>
             </form>
         </div>

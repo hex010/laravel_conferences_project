@@ -16,6 +16,11 @@ return [
         'address' => 'Address',
         'backToTheList' => 'Back to the list',
         'participants' => 'Participants',
+        'confEditing' => 'Editing the conference',
+        'confCreating' => 'Creating a conference',
+        'deleteWarning' => 'Are you sure you want to delete this conference?',
+        'deleteModalTitle' => 'Deleting a conference',
+        'cancel' => 'Cancel',
     ],
     'login_module' => [
         'login' => 'Login',
