@@ -9,7 +9,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav" style="margin-left: auto">
+        <ul class="navbar-nav">
 
             @guest
                 <li class="nav-item">
@@ -17,9 +17,9 @@
                 </li>
             @else
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{__('app.login_module.logout')}}</a>
+                    <a class="nav-link" id="logout-link" href="{{route('logout')}}" >{{__('app.login_module.logout')}}</a>
                 </li>
-               <form id="logout-form" action="{{route('logout')}}" method="post" style="display: none;">
+               <form id="logout-form" action="{{route('logout')}}" method="post">
                     @csrf
 
                 </form>

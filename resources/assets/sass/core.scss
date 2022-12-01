@@ -1,0 +1,65 @@
+.conference-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conference_count {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 30px;
+    color: #121212;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px 10px #000000;
+}
+
+.session_status {
+    background-color: green; color: lime;
+}
+
+.app_body {
+    height: 100%;
+    background: linear-gradient(to top, #80FFDB, #5390D9) fixed;
+}
+
+.app_html {
+    height: 100%;
+}
+
+.conference-list-item {
+    font-weight: bold;
+}
+
+.error-message {
+    color: red;
+}
+
+.login-page-body {
+    background-image: linear-gradient(to top, #7028e4 0%, #e5b2ca 100%);
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+}
+
+.login-page-html {
+    height: 100%;
+}
+
+.login-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+#logout-form {
+    display: none;
+}
+
+.bi-check-circle-fill{
+    font-size: 1.5em;
+    line-height: 1;
+}

@@ -1,11 +1,19 @@
 @extends("layouts.app")
 @section("content")
+
+    {{-- notification, when conference updated/deleted --}}
     @if(session('status'))
-        <div style="background-color: green; color: lime;">{{ session('status') }}</div>
+        <div class="alert alert-success alert-dismissible d-flex align-items-center fade show m-2">
+            {{-- class from icons package (npm i bootstrap-icons) --}}
+            <i class="bi-check-circle-fill"></i>
+
+            <strong class="mx-2">Success!</strong> {{ session('status') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
     @endif
 
-    <div class="container pt-3 my-3 border" style="text-align: center">
-        <p style="font-family: 'Ubuntu', sans-serif; font-size: 30px; color: #121212; letter-spacing: 5px; text-shadow: 2px 2px 10px #000000;">
+    <div class="container pt-3 my-3 border text-center">
+        <p class="conference_count">
             {{trans_choice('app.conferences_module.conferencesCount', count($conferences))}}
         </p>
 

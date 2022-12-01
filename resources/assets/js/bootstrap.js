@@ -9,9 +9,10 @@ window._ = _;
 
 import axios from 'axios';
 window.axios = axios;
+window.$ = window.jQuery = require('jquery');
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-
+window.Bootstrap = require('bootstrap');
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening

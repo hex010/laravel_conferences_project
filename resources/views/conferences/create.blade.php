@@ -3,7 +3,7 @@
 @section('title', 'Conference Creation Form')
 
 @section('content')
-    <div class="form-container" style="height: 100%; display: flex; justify-content: center; align-items: center;">
+    <div class="conference-container">
         <div class="col-lg-6 col-10 mx-auto">
             <div class="p-4 bg-white rounded shadow-lg">
                 <form action="{{ route('conferences.store') }}" method="post">
